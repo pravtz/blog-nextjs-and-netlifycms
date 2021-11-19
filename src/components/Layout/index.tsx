@@ -1,11 +1,8 @@
+import { Wrapper } from './styled'
 
 type LayoutProps = {
-    children: React.ReactNode
+  children: React.ReactNode
 }
-const Layout = ({children}: LayoutProps) => (
-    <>
-        <main>{children}</main>
-    </> 
-)
+const Layout = ({ children }: LayoutProps) => <Wrapper>{children}</Wrapper>
 
 export default Layout
