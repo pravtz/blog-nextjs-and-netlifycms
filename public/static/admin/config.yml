@@ -1,6 +1,9 @@
 backend:
-  name: blog
-  branch: master
+  name: github # "test-repo" or "git-gateway"
+  repo: pravtz/blog-nextjs-and-netlifycms
+  branch: main
+  site_domain: https://blog.pravtz.com.br
+publish_mode: editorial_workflow
 media_folder: static/img
 slug:
   encoding: "ascii"
