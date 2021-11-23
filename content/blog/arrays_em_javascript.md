@@ -1,10 +1,10 @@
 ---
-title: "Arrays em JavaScript"
+title: 'Arrays em JavaScript'
 date: 2019-09-07T08:28:44.559Z
-thumbnail: /static/img/puppy-and-adult-dog.jpg
+thumbnail: /static/img/photo01.jpg
 ---
 
-![codigo](/assets/img/code01.jpg)
+![codigo](/static/img/photo01.jpg)
 
 ### _Algo extremamente importante quando se inicia o aprendizado com a linguagem javascript é conhecer bem todos os métodos e propriedades de um array, Isso fez uma grande diferença para mim e por esse motivo estou compartilhando. Dedique um tempo e faça exemplos de todos os métodos citados. Vai valer apena!_
 
@@ -16,7 +16,7 @@ exemplo:
 
 ```javascript
 //metodo construtor de um array
-const arr = [1, 2, "a", "b", { x: 14, y: 16 }];
+const arr = [1, 2, 'a', 'b', { x: 14, y: 16 }]
 //atualizando valores
 ```
 
@@ -30,8 +30,8 @@ A propriedade length retorna a quantidade de elementos de um array.
 > exemplo:
 
 ```javascript
-const arr = [1, 2, 3];
-arr.length; // retorna: 3
+const arr = [1, 2, 3]
+arr.length // retorna: 3
 ```
 
 ## Métodos de um Array
@@ -72,8 +72,8 @@ Adiciona um novos elementos a um array.
 exemplo:
 
 ```javascript
-const arr = [1, 2, 3];
-arr.concat(4, 5, 6); // retorna: [1,2,3,4,5,6]
+const arr = [1, 2, 3]
+arr.concat(4, 5, 6) // retorna: [1,2,3,4,5,6]
 ```
 
 ### every()
@@ -92,8 +92,8 @@ Percorre todos os elementos de um array e executa uma função callback. Retorna
 exemplo:
 
 ```javascript
-var arr = [1, 2, 3, "a"];
-arr.every((elem) => typeof elem == "number"); // returna: false
+var arr = [1, 2, 3, 'a']
+arr.every((elem) => typeof elem == 'number') // returna: false
 /** Obs:
  * Retorna false porquê existe um string e nen todos são números.
  * Nessa função ele percorre todos os elementos verificando se é number.
@@ -117,10 +117,10 @@ Filtra elemetos de um array, não altera o array original e retorna um novo arra
 Exemplo:
 
 ```js
-var arr = [1, "a", 2, "b", 3, "c", 4, "d", 5, "e"];
+var arr = [1, 'a', 2, 'b', 3, 'c', 4, 'd', 5, 'e']
 arr.filter((elem, ind, obj) => {
-  return elem > 3 && ind < 9;
-});
+  return elem > 3 && ind < 9
+})
 // retorno: [4,5]
 ```
 
@@ -140,24 +140,24 @@ Percorre cada elemento e executa uma função callback, não altera o array orig
 Exemplo:
 
 ```js
-var arr = [1, "a", 2, "b", 3, "c", 4, "d", 5, "e"];
-var msg = "";
+var arr = [1, 'a', 2, 'b', 3, 'c', 4, 'd', 5, 'e']
+var msg = ''
 arr.forEach((elem, ind, obj) => {
-  msg += `arr [${ind}] = ${elem} \n`;
-});
-console.log(msg);
+  msg += `arr [${ind}] = ${elem} \n`
+})
+console.log(msg)
 /** retorna
-     * 
-        arr [0] = 1 
-        arr [1] = a 
-        arr [2] = 2 
-        arr [3] = b 
-        arr [4] = 3 
-        arr [5] = c 
-        arr [6] = 4 
-        arr [7] = d 
-        arr [8] = 5 
-        arr [9] = e 
+     *
+        arr [0] = 1
+        arr [1] = a
+        arr [2] = 2
+        arr [3] = b
+        arr [4] = 3
+        arr [5] = c
+        arr [6] = 4
+        arr [7] = d
+        arr [8] = 5
+        arr [9] = e
     */
 ```
 
@@ -175,8 +175,8 @@ Busca e retorna o indice do primeiro elemento encontrado que seja igual ao prime
 Exemplo:
 
 ```js
-var arr = [1, "a", 2, "b", 3, "c", 4, "d", 1];
-console.log(arr.indexOf(1, 2));
+var arr = [1, 'a', 2, 'b', 3, 'c', 4, 'd', 1]
+console.log(arr.indexOf(1, 2))
 // retorna 8
 // iguinorou a o primeito elemento porque a busca começou a partir de 2 (terceiro elemento)
 ```
@@ -195,8 +195,8 @@ Busca e retorna o indice do ultimo elemento encontrado que seja igual ao primeir
 Exemplo:
 
 ```js
-var arr = [1, "a", 2, "b", 3, "c", 4, "d", 1];
-console.log(arr.lastIndexOf(1));
+var arr = [1, 'a', 2, 'b', 3, 'c', 4, 'd', 1]
+console.log(arr.lastIndexOf(1))
 // retorna 8
 ```
 
@@ -213,16 +213,16 @@ Esse método transforma elementos de um array em uma string colocando um separad
 Exemplo 1 :
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-console.log(arr.join());
+var arr = [1, 2, 3, 4, 5]
+console.log(arr.join())
 // retorna "1,2,3,4,5"
 ```
 
 Exemplo 2 :
 
 ```js
-var arr = [1, 2, 3, 4, 5];
-console.log(arr.join("-"));
+var arr = [1, 2, 3, 4, 5]
+console.log(arr.join('-'))
 // retorna "1-2-3-4-5"
 ```
 
@@ -256,8 +256,8 @@ Remove o último elemento de um array
 Exemplo:
 
 ```js
-var arr = [1, 2, 3];
-arr.pop();
+var arr = [1, 2, 3]
+arr.pop()
 // retorna 3
 // retorna o elemento removido
 ```
@@ -269,8 +269,8 @@ arr.pop();
 > exemplo:
 
 ```js
-var arr = [1, 2, 3];
-arr.push();
+var arr = [1, 2, 3]
+arr.push()
 // retorna 3
 // retorna o elemento removido
 ```
@@ -290,11 +290,11 @@ arr.push();
   Exemplo 1:
 
 ```js
-var arr = [2, 4, 8];
+var arr = [2, 4, 8]
 var somaElements = arr.reduce((v1, v2, ind, arr) => {
-  return v1 + v2;
-});
-console.log(somaElements);
+  return v1 + v2
+})
+console.log(somaElements)
 // retorna 14
 ```
 
@@ -302,11 +302,11 @@ Nesse exemplo foi possivel ver que houve duas interações e o valor retornado f
 Exemplo 2 :
 
 ```js
-var arr = [2, 4, 8];
+var arr = [2, 4, 8]
 var somaElements = arr.reduce((v1, v2, ind, arr) => {
-  return v1 + v2;
-});
-console.log(somaElements, 1000);
+  return v1 + v2
+})
+console.log(somaElements, 1000)
 // retorna 1014, pois foi definido um valor inicial de 1000
 ```
 
@@ -325,7 +325,7 @@ console.log(somaElements, 1000);
   Exemplo:
 
 ```js
-console.log([2, 3, 4].reduceRight((v1, v2, ind, arr) => v1 - v2));
+console.log([2, 3, 4].reduceRight((v1, v2, ind, arr) => v1 - v2))
 // retorna  -5
 ```
 
@@ -336,8 +336,8 @@ console.log([2, 3, 4].reduceRight((v1, v2, ind, arr) => v1 - v2));
 > Exemplo:
 
 ```js
-var arr = [1, 2, 3];
-arr.reverse();
+var arr = [1, 2, 3]
+arr.reverse()
 // retorna [3,2,1]
 ```
 
@@ -348,8 +348,8 @@ arr.reverse();
 > Exemplo:
 
 ```js
-var arr = [1, 2, 3];
-arr.shift();
+var arr = [1, 2, 3]
+arr.shift()
 // retorna 1
 ```
 
@@ -364,8 +364,8 @@ arr.shift();
   Exemplo:
 
 ```js
-var arr = [1, 2, 3];
-arr.unshift("a", "b", 0);
+var arr = [1, 2, 3]
+arr.unshift('a', 'b', 0)
 // retorna 6
 ```
 
@@ -381,14 +381,14 @@ arr.unshift("a", "b", 0);
   Exemplo:
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7];
-console.log(arr.slice(2));
+var arr = [1, 2, 3, 4, 5, 6, 7]
+console.log(arr.slice(2))
 // retorna [3,4,5,6,7]
-console.log(arr.slice(2, 4));
+console.log(arr.slice(2, 4))
 // retorna [3,4]
-console.log(arr.slice(-4, 5));
+console.log(arr.slice(-4, 5))
 // retorna [4,5]
-console.log(arr.slice(-5, -2));
+console.log(arr.slice(-5, -2))
 // retorna [3,4,5]
 ```
 
@@ -405,24 +405,24 @@ console.log(arr.slice(-5, -2));
   Exemplo 1:
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr.splice(4));
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr.splice(4))
 // retorna [1,2,3,4] os quatro primeiros foram protegidos
 ```
 
 Exemplo 2:
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr.splice(4, 2));
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr.splice(4, 2))
 // retorna [1,2,3,4,7,8,9] os elementos 5 e 6 foram removidos
 ```
 
 Exemplo 3:
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arr.splice(4, 2, "a", "b"));
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arr.splice(4, 2, 'a', 'b'))
 // retorna [1,2,3,4,"a","b",7,8,9] os elementos 5 e 6 foram removidos e "a" e "b" foram adidionados
 ```
 
@@ -440,8 +440,8 @@ console.log(arr.splice(4, 2, "a", "b"));
   Exemplo:
 
 ```js
-var arr = [1, 2, 3, "a"];
-console.log((elem, ind, obj) => typeof elem == "string");
+var arr = [1, 2, 3, 'a']
+console.log((elem, ind, obj) => typeof elem == 'string')
 // retorna true pois existe um elemento string no array
 ```
 
@@ -457,8 +457,8 @@ Ordena os elementos de um array conforme a regra de seu argumento.
 Exemplo:
 
 ```js
-var arr = [5, 6, 4, 3];
-arr.sort();
+var arr = [5, 6, 4, 3]
+arr.sort()
 // retorna [3,4,5,6]
 ```
 
@@ -469,8 +469,8 @@ arr.sort();
 > Exemplo:
 
 ```js
-var arr = [1, 2, 3];
-console.log(arr.toString());
+var arr = [1, 2, 3]
+console.log(arr.toString())
 // retorna "1,2,3"
 ```
 
