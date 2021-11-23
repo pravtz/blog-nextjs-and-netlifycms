@@ -2,19 +2,23 @@ import fs from 'fs'
 import { GetStaticPropsResult } from 'next'
 import path from 'path'
 import Layout from '../../components/Layout'
+import Image from 'next/image'
 
-export type postProps = {
-  blogpost: {
-    html: string
-    attributes: {
-      title: string
-      date: string
-      thumbnail: string
-    }
-  }
+export type AttributesProps = {
+  title: string
+  date: string
+  thumbnail: string
+  category?: string
+}
+export type PostProps = {
+  html: string
+  attributes: AttributesProps
+}
+type blogpostProps = {
+  blogpost: PostProps
 }
 
-const Post = ({ blogpost }: postProps) => {
+const Post = ({ blogpost }: blogpostProps) => {
   if (!blogpost) return <div>not found</div>
 
   const { html, attributes } = blogpost
@@ -22,7 +26,14 @@ const Post = ({ blogpost }: postProps) => {
   return (
     <Layout>
       <article>
+        <Image
+          src={attributes.thumbnail}
+          alt={attributes.title}
+          width={500}
+          height={500}
+        />
         <h1>{attributes.title}</h1>
+
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
@@ -50,16 +61,14 @@ type paramsProps = {
     slug: string
   }
 }
-
 export async function getStaticProps({
   params
-}: paramsProps): Promise<GetStaticPropsResult<postProps>> {
+}: paramsProps): Promise<GetStaticPropsResult<blogpostProps>> {
   const { slug } = params
 
   const blogpost = await import(`../../../content/blog/${slug}.md`).catch(
     () => null
   )
-  console.log(slug)
 
   return {
     props: {
