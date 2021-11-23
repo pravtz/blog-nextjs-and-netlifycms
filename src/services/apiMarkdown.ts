@@ -19,7 +19,6 @@ export const slugs = async () => {
     .context('../../content/blog', false, /\.md$/)
     .keys()
     .map((relativePath: string) => relativePath.substring(2))
-  console.log(slugFiles)
 
   return slugFiles
 }
