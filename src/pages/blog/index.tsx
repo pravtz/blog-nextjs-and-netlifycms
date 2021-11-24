@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import Layout from '../../components/Layout'
 import { importBlogPosts } from '../../services/apiMarkdown'
 import { AttributesProps } from './[slug]'
-import Image from 'next/image'
+
+import Card from '../../components/Card'
 
 type postProps = {
   html: string
@@ -17,20 +17,14 @@ const Blog = ({ postsList }: postsProps) => {
   return (
     <Layout>
       {postsList.map((post) => (
-        <div key={post.slug} className="post">
-          <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-            <a>
-              <Image
-                src={post.attributes.thumbnail}
-                alt={post.attributes.title}
-                width={500}
-                height={500}
-              />
-
-              <h2>{post.attributes.title}</h2>
-            </a>
-          </Link>
-        </div>
+        <Card
+          key={post.slug}
+          imageHeader={post.attributes.thumbnail}
+          dataPost={'11-22-11'}
+          title={post.attributes.title}
+          descriptionPost={'sem descrição'}
+          linkAs={`/blog/${post.slug}`}
+        />
       ))}
     </Layout>
   )
