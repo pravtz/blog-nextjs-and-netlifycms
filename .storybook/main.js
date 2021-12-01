@@ -5,7 +5,13 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-viewport",
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        viewport: false,
+      }
+    }
   ],
   "core": {
     "builder": "webpack5"
