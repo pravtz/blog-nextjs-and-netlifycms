@@ -5,5 +5,15 @@ export type CardPostProps = {
   descriptionPost?: string
   link?: string
   linkAs?: string
-  styleBreakpoint?: string
+}
+export type AttributesProps = {
+  title: string
+  date: string
+  thumbnail: string
+  category?: string
+}
+export type postProps = {
+  html: string
+  attributes: AttributesProps
+  slug: string
 }
