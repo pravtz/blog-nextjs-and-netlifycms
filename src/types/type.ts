@@ -5,12 +5,15 @@ export type CardPostProps = {
   descriptionPost?: string
   link?: string
   linkAs?: string
+  category: string
+  firstCard: boolean
 }
 export type AttributesProps = {
   title: string
   date: string
-  thumbnail: string
+  description: string
   category?: string
+  thumbnail: string
 }
 export type postProps = {
   html: string
