@@ -1,6 +1,8 @@
 ---
 title: 'Arrays em JavaScript'
 date: 2019-09-07T08:28:44.559Z
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultricies nisl ligula, at tristique diam fermentum quis.
+category: Tecnologia
 thumbnail: /static/img/photo01.jpg
 ---
 
