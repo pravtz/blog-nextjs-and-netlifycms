@@ -6,15 +6,28 @@ const GlobalStyled = createGlobalStyle`
   padding: 0;
   margin: 0;
 }
+a{
+  cursor: pointer;
+}
   html, body, #__next {
     height: 100%;
   }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  p, a, address{
+    font-family: 'Ubuntu', sans-serif;
+
   }
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
   /* html {
     font-size: 62.5%
   } */
+:root{
+  --spacing-betwen-box-align: 2.5rem; //40px
+  --spacing-basic: 0.3125rem; //5px
+  --font-size-title: 1.375rem; //22px
+}
+
 `
 export default GlobalStyled
