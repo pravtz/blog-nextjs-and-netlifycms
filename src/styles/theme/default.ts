@@ -1,7 +1,6 @@
 const defaultTheme = {
   nameTheme: 'default',
   colors: {
-    primary: '#cb997e',
     secondary: '#ddbea9',
     text: '#ffe8d6',
     tertiary: '#b7b7a4',
@@ -9,6 +8,9 @@ const defaultTheme = {
     bg: '#6b705c',
 
     // styles color originals project
+    backgroundBeforeThePageFold: '#fdfdfd',
+    backgraundHeaderBar: '#fff',
+    primary: '#cb997e',
     colorMediumGray: '#666666',
     colorLightGray: '#b9b9b9',
 
