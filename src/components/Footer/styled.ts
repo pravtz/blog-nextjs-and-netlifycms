@@ -40,12 +40,17 @@ export const Content = styled.div`
 
   .content-main {
     display: flex;
+    flex-direction: column;
+
+    ${media.greaterThan('medium')`
+    flex-direction: row;
     justify-content: center;
+  `}
   }
 `
 export const Copyright = styled.div`
   margin-top: var(--spacing-betwen-box-align);
-  width: 100%;
+
   text-align: center;
   font-size: 14px;
   font-weight: 200;
@@ -53,29 +58,48 @@ export const Copyright = styled.div`
   margin-bottom: calc(var(--spacing-betwen-box-align) / 4);
 `
 const contactAndProject = styled.div`
-  width: 40%;
+  margin-bottom: calc(var(--spacing-betwen-box-align));
   h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 24px;
+  }
+  text-align: center;
+  ul {
+    text-align: center;
+    li {
+      text-align: center;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 200;
+      list-style: none;
+      font-size: 16px;
+    }
+  }
+
+  ${media.greaterThan('medium')`
+
+    width: 40%;
+    h4 {
     margin-bottom: calc(var(--spacing-betwen-box-align) / 2);
   }
   ul {
     li {
-      font-family: 'Ubuntu', sans-serif;
-      font-weight: 200;
       font-size: 18px;
-
-      list-style: none;
     }
   }
+  `}
 `
 export const Contact = styled(contactAndProject)`
-  border-right: 1px solid #b9b9b9;
-  margin-right: calc(var(--spacing-betwen-box-align) / 2);
-  padding-right: calc(var(--spacing-betwen-box-align) / 4);
+  border-bottom: 1px solid #b9b9b9;
+  padding-bottom: calc(16px / 2);
 
-  text-align: right;
+  ${media.greaterThan('medium')`
+  border-bottom: none;
+
+    margin-right: calc(var(--spacing-betwen-box-align) / 2);
+  padding-right: calc(var(--spacing-betwen-box-align) / 4);
+    border-right: 1px solid #b9b9b9;
+    text-align: right;
   h4 {
     text-align: right;
   }
@@ -85,13 +109,19 @@ export const Contact = styled(contactAndProject)`
       text-align: right;
     }
   }
+  `}
 `
 export const Projects = styled(contactAndProject)`
-  border-left: 1px solid #b9b9b9;
-  margin-left: calc(var(--spacing-betwen-box-align) / 2);
+  border-top: 1px solid #b9b9b9;
+  padding-top: calc(16px / 2);
+  ${media.greaterThan('medium')`
+  border-top: none;
+  padding-top: 0;
+
+    margin-left: calc(var(--spacing-betwen-box-align) / 2);
   padding-left: calc(var(--spacing-betwen-box-align) / 4);
-  text-align: left;
-  h4 {
+   border-left: 1px solid #b9b9b9;
+   h4 {
     text-align: left;
   }
   ul {
@@ -100,4 +130,5 @@ export const Projects = styled(contactAndProject)`
       text-align: left;
     }
   }
+  `}
 `
