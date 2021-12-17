@@ -1,8 +1,8 @@
 import Layout from '../../components/Layout'
 import { importBlogPosts } from '../../services/apiMarkdown'
-import { AttributesProps } from './[slug]'
+import { AttributesProps } from '../../types/type'
 
-import Card from '../../components/Card'
+import PostsHomeTemplate from '../../Templates/PostsHome'
 
 type postProps = {
   html: string
@@ -16,16 +16,7 @@ type postsProps = {
 const Blog = ({ postsList }: postsProps) => {
   return (
     <Layout>
-      {postsList.map((post) => (
-        <Card
-          key={post.slug}
-          imageHeader={post.attributes.thumbnail}
-          dataPost={'11-22-11'}
-          title={post.attributes.title}
-          descriptionPost={'sem descrição'}
-          linkAs={`/blog/${post.slug}`}
-        />
-      ))}
+      <PostsHomeTemplate postsList={postsList} firstCard={false} />
     </Layout>
   )
 }
