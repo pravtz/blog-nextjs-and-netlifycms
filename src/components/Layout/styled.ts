@@ -3,7 +3,8 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   background-color: white;
-  //background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) =>
+    props.theme.colors.backgroundBeforeThePageFold};
   height: 100%;
 `
 export const Content = styled.div`
