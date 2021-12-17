@@ -8,17 +8,16 @@ type postsProps = {
 }
 
 const PostsHomeTemplate = ({ postsList, firstCard }: postsProps) => {
-  if (firstCard) {
-    const postsM = { ...postsList[0], width: 1000 }
-    console.log(postsList)
-  }
   return (
     <Wrapper>
       <div className="content">
-        {postsList.map((post) => (
+        {postsList.map((post, indice) => (
           <Card
+            width={indice == 0 && firstCard ? 1024 : 768}
+            height={indice == 0 && firstCard ? 768 : 576}
+            layoutImage={indice == 0 && firstCard ? 'responsive' : ''}
             firstCard={firstCard}
-            key={post.slug}
+            key={indice}
             imageHeader={post.attributes.thumbnail}
             dataPost={'11-22-11'}
             title={post.attributes.title}
