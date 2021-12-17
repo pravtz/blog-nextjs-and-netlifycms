@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type CardPostProps = {
+  width: number
+  height: number
   imageHeader: string
   dataPost: string
   title: string
@@ -7,6 +10,7 @@ export type CardPostProps = {
   linkAs?: string
   category: string
   firstCard: boolean
+  layoutImage: any
 }
 export type AttributesProps = {
   title: string
@@ -19,4 +23,10 @@ export type postProps = {
   html: string
   attributes: AttributesProps
   slug: string
+}
+export type HeaderContentHomeProps = {
+  title: string
+  description: string
+  thumbnail: string
+  date?: string
 }
