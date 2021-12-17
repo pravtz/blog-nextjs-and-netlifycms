@@ -1,19 +1,50 @@
 import Layout from '../components/Layout'
 import { attributes, html } from '../../content/home.md'
-import Link from 'next/link'
+import { importBlogPosts } from '../services/apiMarkdown'
+import { postProps } from '../types/type'
+import PostsHomeTemplate from '../Templates/PostsHome'
+import HeaderContentHome from '../Templates/HeaderContentHome'
 
-const Home = () => {
+type postsProps = {
+  postsList: postProps[]
+}
+type ContentHomeProps = {
+  att: {
+    title: string
+    description: string
+    date?: string
+    thumbnail: string
+  }
+}
+
+const Home = ({ postsList }: postsProps) => {
+  const att: any = {
+    title: attributes.title,
+    description: attributes.description,
+    thumbnail: attributes.thumbnail
+  }
+
   return (
     <>
       <Layout>
-        <h1>{attributes.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <Link href="/blog" as={`/blog`}>
-          Blog
-        </Link>
+        <HeaderContentHome attrib={att} />
+
+        {/* <div dangerouslySetInnerHTML={{ __html: html }} /> */}
+
+        <PostsHomeTemplate postsList={postsList} firstCard />
       </Layout>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const postsList = await importBlogPosts()
+
+  return {
+    props: {
+      postsList
+    }
+  }
 }
 
 export default Home
