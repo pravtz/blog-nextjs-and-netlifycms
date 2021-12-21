@@ -2,7 +2,7 @@ import fs from 'fs'
 import { GetStaticPropsResult } from 'next'
 import path from 'path'
 import Layout from '../../components/Layout'
-import Image from 'next/image'
+import PostBlog from '../../Templates/PostBlog'
 
 export type AttributesProps = {
   title: string
@@ -25,17 +25,7 @@ const Post = ({ blogpost }: blogpostProps) => {
 
   return (
     <Layout>
-      <article>
-        <Image
-          src={attributes.thumbnail}
-          alt={attributes.title}
-          width={500}
-          height={500}
-        />
-        <h1>{attributes.title}</h1>
-
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </article>
+      <PostBlog html={html} attributes={attributes} />
     </Layout>
   )
 }

@@ -6,8 +6,6 @@ category: Tecnologia
 thumbnail: /static/img/photo01.jpg
 ---
 
-![codigo](/static/img/photo01.jpg)
-
 ### _Algo extremamente importante quando se inicia o aprendizado com a linguagem javascript é conhecer bem todos os métodos e propriedades de um array, Isso fez uma grande diferença para mim e por esse motivo estou compartilhando. Dedique um tempo e faça exemplos de todos os métodos citados. Vai valer apena!_
 
 ## Conceito:
@@ -21,6 +19,8 @@ exemplo:
 const arr = [1, 2, 'a', 'b', { x: 14, y: 16 }]
 //atualizando valores
 ```
+
+![codigo](/static/img/photo01.jpg)
 
 ## Propriedades de um array:
 
