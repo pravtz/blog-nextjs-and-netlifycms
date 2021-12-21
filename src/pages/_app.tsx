@@ -4,6 +4,7 @@ import Head from 'next/head'
 import GlobalStyled from '../styles/global'
 import defaultTheme from '../styles/theme/default'
 import NextProgress from 'next-progress'
+import 'prismjs/themes/prism-tomorrow.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
