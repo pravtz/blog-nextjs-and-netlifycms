@@ -1,7 +1,9 @@
 ---
 title: Bem Vindo ao meu Blog
-description: Este blog tem interesse informativo, a grande maioria dos assuntos são relacionados a técnologia. Não tenho o objetivo de ser imparcial, vou expressar minha opinião mas estarei sempre aberto a discutilas.
-date: 2019-03-17T19:31:20.591Z
+description: Este blog tem interesse informativo, a grande maioria dos assuntos
+  são relacionados a técnologia. Não tenho o objetivo de ser imparcial, vou
+  expressar minha opinião mas estarei sempre aberto a discutilas.
+date: 2022-01-07T11:17:14.165Z
 thumbnail: /static/img/pravtz.jpg
 ---
 
