@@ -6,6 +6,6 @@ export default {
   Component: Home
 } as ComponentMeta<typeof Home>
 
-const Template: ComponentStory<typeof Home> = () => <Home />
+const Template: ComponentStory<typeof Home> = () => <Home postsList={[]} />
 
 export const HomePage = Template.bind({})
