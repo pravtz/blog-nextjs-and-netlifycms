@@ -26,13 +26,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
+const Button = ({ label, ...props }: ButtonProps) => {
   return (
     <button type="button" {...props}>
       {label}
