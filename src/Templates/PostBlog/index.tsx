@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Wrapper, Title, Content, Container, Description } from './styled'
 import { AttributesProps } from '../../types/type'
-import Prism from 'Prismjs'
+import prism from 'prismjs'
 import { useEffect } from 'react'
 
 type PostProps = {
@@ -11,7 +11,7 @@ type PostProps = {
 
 const PostBlog = ({ html, attributes }: PostProps) => {
   useEffect(() => {
-    Prism.highlightAll()
+    prism.highlightAll()
   }, [html])
   return (
     <Container>
