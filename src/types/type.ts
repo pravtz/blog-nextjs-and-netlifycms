@@ -19,6 +19,15 @@ export type AttributesProps = {
   category?: string
   thumbnail: string
 }
+
+export type ListPostPromisse = {
+  title: string
+  date: string
+  description: string
+  category?: string
+  thumbnail: string
+  slug: string
+}
 export type postProps = {
   html: string
   attributes: AttributesProps
