@@ -19,7 +19,7 @@ const PostsHomeTemplate = ({ postsList, firstCard }: postsProps) => {
             firstCard={firstCard}
             key={indice}
             imageHeader={post.attributes.thumbnail}
-            dataPost={'11-22-11'}
+            dataPost={post.attributes.date}
             title={post.attributes.title}
             descriptionPost={post.attributes.description}
             category={post.attributes.category || 'ASSUNTOS GERAIS'}
