@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CardPostProps } from '../../types/type'
+import { dataFormatPost } from '../../utils/dateFormatPost'
 import {
   Wrapper,
   Content,
@@ -24,6 +25,7 @@ const Card = ({
   height,
   layoutImage
 }: CardPostProps) => {
+  const newDate = new Date(dataPost)
   return (
     <Wrapper firstCard={firstCard}>
       <Link href="/blog/[slug]" as={linkAs}>
@@ -46,7 +48,7 @@ const Card = ({
             </Title>
             <BoxWrapperContent className="box-wrapper-content">
               <DatePost>
-                <p>{dataPost}</p>
+                <p>{dataFormatPost(newDate)}</p>
               </DatePost>
               <DescriptionPost className="description-post">
                 <p>{descriptionPost || 'without description'}</p>
