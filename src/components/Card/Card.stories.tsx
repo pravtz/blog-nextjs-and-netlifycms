@@ -16,7 +16,12 @@ const args: CardPostProps = {
   title: 'New site design made with Nextjs',
   descriptionPost:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed scelerisque metus, eu scelerisque dui. Etiam porta elit eget egestas ultrices.',
-  linkAs: '/blog/example'
+  linkAs: '/blog/example',
+  width: 500,
+  height: 500,
+  category: 'Tecnologia',
+  firstCard: false,
+  layoutImage: ''
 }
 
 export const Basic = Template.bind({})
