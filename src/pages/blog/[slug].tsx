@@ -1,12 +1,13 @@
 import fs from 'fs'
 import { GetStaticPropsResult } from 'next'
 import path from 'path'
-import Layout from '../../components/Layout'
+import LayoutPost from '../../components/LayoutPost'
 import PostBlog from '../../Templates/PostBlog'
 
 export type AttributesProps = {
   title: string
   date: string
+  description: string
   thumbnail: string
   category?: string
 }
@@ -24,9 +25,9 @@ const Post = ({ blogpost }: blogpostProps) => {
   const { html, attributes } = blogpost
 
   return (
-    <Layout>
+    <LayoutPost>
       <PostBlog html={html} attributes={attributes} />
-    </Layout>
+    </LayoutPost>
   )
 }
 
